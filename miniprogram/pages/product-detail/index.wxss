@@ -1,52 +1,29 @@
-.hero-swiper {
+.hero {
   width: 100%;
   height: 460rpx;
   border-radius: 12rpx;
-  overflow: hidden;
 }
-
-.hero {
-  width: 100%;
-  height: 100%;
-}
-
 .name {
   margin-top: 16rpx;
   font-size: 34rpx;
   font-weight: bold;
-  color: #443d36;
 }
-
 .price {
-  margin-top: 10rpx;
-  color: #8f6f52;
+  margin-top: 12rpx;
+  color: #d85b7a;
   font-size: 34rpx;
   font-weight: bold;
 }
-
-.highlight-wrap {
-  margin-top: 14rpx;
-}
-
-.highlight-tag {
-  display: inline-block;
-  background: #efebe5;
-  color: #665e56;
-  border-radius: 999rpx;
-  padding: 6rpx 14rpx;
-  margin-right: 10rpx;
-  margin-bottom: 8rpx;
-  font-size: 22rpx;
-}
-
 .title {
   font-size: 30rpx;
   font-weight: 600;
   margin-bottom: 12rpx;
-  color: #443d36;
 }
-
 .item {
-  color: #666059;
+  color: #666;
   line-height: 1.8;
+}
+.highlight {
+  color: #666;
+  margin-bottom: 8rpx;
 }

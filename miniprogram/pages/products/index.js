@@ -2,7 +2,7 @@ const { getProducts } = require('../../utils/api');
 
 Page({
   data: {
-    categories: ['全部', '连衣裙', '上衣', '裤子', '套装', '外套'],
+    categories: ['全部', '连衣裙', '上衣', '裤子', '套装'],
     currentCategory: '全部',
     products: [],
     loading: false

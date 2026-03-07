@@ -1,30 +1,20 @@
 <view class="container" wx:if="{{product}}">
   <view class="card">
-    <swiper class="hero-swiper" autoplay indicator-dots circular>
-      <swiper-item wx:for="{{product.images}}" wx:key="*this">
-        <image class="hero" src="{{item}}" mode="aspectFill" />
-      </swiper-item>
-    </swiper>
+    <image class="hero" src="{{product.mainImage}}" mode="aspectFill" />
     <view class="name">{{product.name}}</view>
     <view class="price">¥{{product.price}}</view>
-    <view class="highlight-wrap">
-      <text wx:for="{{product.highlights}}" wx:key="*this" class="highlight-tag">{{item}}</text>
-    </view>
   </view>
 
   <view class="card">
     <view class="title">商品信息</view>
-    <view class="item">面料说明：{{product.fabric}}</view>
-    <view class="item">尺码建议：{{product.sizeSuggestion}}</view>
-    <view class="item">适合场景：{{product.scenes.join(' / ')}}</view>
-    <view class="item">穿搭建议：{{product.outfitTips}}</view>
+    <view class="item">面料：{{product.fabric}}</view>
+    <view class="item">尺码：{{product.sizes}}</view>
+    <view class="item">介绍：{{product.description}}</view>
   </view>
 
   <view class="card">
-    <view class="title">颜色与尺码</view>
-    <view class="item">颜色：{{product.colors.join(' / ')}}</view>
-    <view class="item">尺码：{{product.sizes.join(' / ')}}</view>
-    <view class="item">商品介绍：{{product.description}}</view>
+    <view class="title">穿搭卖点</view>
+    <view wx:for="{{product.highlights}}" wx:key="*this" class="highlight">• {{item}}</view>
   </view>
 
   <button class="primary-btn" bindtap="goConsult">立即咨询</button>

@@ -1,6 +1,6 @@
 page {
-  background: #f6f3ef;
-  color: #3d3935;
+  background: #f7f7f7;
+  color: #333;
   font-size: 28rpx;
 }
 
@@ -9,15 +9,14 @@ page {
 }
 
 .card {
-  background: #fcfbf9;
+  background: #fff;
   border-radius: 16rpx;
   padding: 24rpx;
   margin-bottom: 20rpx;
-  border: 1rpx solid #efebe5;
 }
 
 .primary-btn {
-  background: #b89b7a;
+  background: #d85b7a;
   color: #fff;
   border: none;
 }

@@ -1,94 +1,36 @@
-.home-page {
-  background: #f6f3ef;
-  min-height: 100vh;
-  padding-bottom: 120rpx;
-}
-
-.banner-card {
-  padding: 16rpx;
-}
-
 .banner-img {
   width: 100%;
-  height: 300rpx;
+  height: 280rpx;
   border-radius: 12rpx;
 }
-
-.banner-title {
-  margin-top: 18rpx;
+.brand-name {
   font-size: 40rpx;
-  font-weight: 700;
-  color: #3f3a35;
+  font-weight: bold;
+  margin-top: 20rpx;
 }
-
-.banner-subtitle,
-.section-desc,
-.empty-text {
+.brand-desc {
+  color: #666;
   margin-top: 8rpx;
-  color: #7a746d;
-  line-height: 1.7;
 }
-
 .section-title {
   font-size: 32rpx;
   font-weight: 600;
-  margin-bottom: 16rpx;
-  color: #3f3a35;
+  margin-bottom: 20rpx;
 }
-
-.series-list {
+.tag-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 14rpx;
-  margin-bottom: 16rpx;
+  margin-bottom: 20rpx;
 }
-
-.series-item {
-  padding: 12rpx 20rpx;
+.tag {
+  background: #fdf1f4;
+  color: #d85b7a;
+  padding: 8rpx 18rpx;
   border-radius: 999rpx;
-  background: #efebe5;
-  color: #635b52;
+  margin-right: 12rpx;
+  margin-bottom: 12rpx;
 }
-
-.ghost-btn {
-  background: #fff;
-  color: #8a7f74;
-  border: 1rpx solid #e0d8cf;
-}
-
-.hot-item {
-  display: flex;
-  align-items: center;
-  padding: 14rpx 0;
-  border-bottom: 1rpx solid #f0ebe4;
-}
-
-.hot-item:last-child {
-  border-bottom: none;
-}
-
-.hot-image {
-  width: 120rpx;
-  height: 120rpx;
-  border-radius: 10rpx;
-  margin-right: 18rpx;
-}
-
-.hot-name {
-  color: #4b433b;
-  font-size: 28rpx;
-}
-
-.hot-price {
-  margin-top: 10rpx;
-  color: #8f6f52;
-  font-weight: 700;
-}
-
-.consult-btn {
-  position: fixed;
-  left: 24rpx;
-  right: 24rpx;
-  bottom: 24rpx;
-  background: #b89b7a;
+.contact-text {
+  margin-bottom: 20rpx;
+  color: #666;
 }

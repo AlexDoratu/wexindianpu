@@ -1,192 +1,115 @@
 [
   {
-    "id": "dress-101",
-    "name": "云朵奶白收腰连衣裙",
+    "id": "dress-001",
+    "name": "法式收腰碎花连衣裙",
     "category": "连衣裙",
     "price": 239,
-    "mainImage": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80",
+    "mainImage": "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80",
     "images": [
-      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
     ],
-    "fabric": "93%聚酯纤维，7%氨纶",
-    "sizes": ["S", "M", "L"],
-    "colors": ["奶白", "浅杏"],
-    "highlights": ["显腰线", "轻盈垂坠", "通勤约会两穿"],
-    "sizeSuggestion": "155-162cm建议S，163-168cm建议M，169cm以上建议L",
-    "scenes": ["通勤", "约会", "下午茶"],
-    "outfitTips": "搭配浅色小西装和低跟鞋，通勤更利落。",
-    "description": "柔和奶白色调，A字裙摆更修饰腿型。"
+    "fabric": "95%聚酯纤维，5%氨纶",
+    "sizes": "S / M / L",
+    "highlights": ["显腰线", "轻盈不闷热", "通勤约会都适合"],
+    "description": "V领与收腰版型，适合春夏日常穿搭。"
   },
   {
-    "id": "dress-102",
-    "name": "温柔法式碎花连衣裙",
+    "id": "dress-002",
+    "name": "气质吊带针织连衣裙",
     "category": "连衣裙",
     "price": 269,
-    "mainImage": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
+    "mainImage": "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80",
     "images": [
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=800&q=80"
     ],
-    "fabric": "雪纺复合面料",
-    "sizes": ["S", "M", "L"],
-    "colors": ["雾粉", "米杏"],
-    "highlights": ["气质V领", "显瘦收腰", "上镜显白"],
-    "sizeSuggestion": "上身偏瘦可选正常尺码，胸围丰满建议大一码",
-    "scenes": ["约会", "聚会", "旅行"],
-    "outfitTips": "可搭配针织开衫与小方包，提升精致感。",
-    "description": "小碎花元素更显温柔，日常拍照都出片。"
+    "fabric": "粘纤混纺针织",
+    "sizes": "S / M / L",
+    "highlights": ["弹力舒适", "显瘦垂坠", "单穿叠穿都好看"],
+    "description": "修身但不紧绷，打造优雅线条。"
   },
   {
-    "id": "top-201",
-    "name": "轻氧通勤衬衫上衣",
+    "id": "top-001",
+    "name": "小众泡泡袖衬衫",
     "category": "上衣",
-    "price": 169,
-    "mainImage": "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=900&q=80",
+    "price": 179,
+    "mainImage": "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=800&q=80",
     "images": [
-      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1551232865-3f0890e580d9?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=800&q=80"
     ],
-    "fabric": "棉麻混纺",
-    "sizes": ["S", "M", "L", "XL"],
-    "colors": ["米白", "雾蓝"],
-    "highlights": ["透气不闷", "版型挺括", "百搭基础款"],
-    "sizeSuggestion": "肩宽偏宽建议选大一码，喜欢宽松可加一码",
-    "scenes": ["通勤", "会面", "日常"],
-    "outfitTips": "下装可搭配高腰西裤或半裙，风格更干净。",
-    "description": "简洁衬衫线条，适合打造轻职场穿搭。"
+    "fabric": "棉混纺",
+    "sizes": "S / M / L / XL",
+    "highlights": ["肩颈修饰", "百搭通勤", "面料亲肤"],
+    "description": "简约但有设计感，适合日常与通勤。"
   },
   {
-    "id": "top-202",
-    "name": "针织修身短袖上衣",
+    "id": "top-002",
+    "name": "基础款短袖针织上衣",
     "category": "上衣",
-    "price": 139,
-    "mainImage": "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=80",
+    "price": 129,
+    "mainImage": "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=800&q=80",
     "images": [
-      "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=800&q=80"
     ],
-    "fabric": "莫代尔针织",
-    "sizes": ["S", "M", "L"],
-    "colors": ["浅灰", "奶杏", "黑色"],
-    "highlights": ["弹力亲肤", "修饰肩颈", "可单穿可内搭"],
-    "sizeSuggestion": "贴身款，喜欢松量建议大一码",
-    "scenes": ["日常", "通勤", "出游"],
-    "outfitTips": "搭配高腰阔腿裤可拉长比例，显高显瘦。",
-    "description": "短袖版型简约利落，夏季搭配效率高。"
+    "fabric": "莫代尔混纺",
+    "sizes": "S / M / L",
+    "highlights": ["柔软亲肤", "不易起皱", "打底外穿皆可"],
+    "description": "适合多种下装搭配，衣橱必备单品。"
   },
   {
-    "id": "pants-301",
-    "name": "高腰垂感直筒裤",
+    "id": "pants-001",
+    "name": "高腰直筒西装裤",
     "category": "裤子",
     "price": 199,
-    "mainImage": "https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=900&q=80",
+    "mainImage": "https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=800&q=80",
     "images": [
-      "https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=900&q=80"
-    ],
-    "fabric": "西装混纺面料",
-    "sizes": ["S", "M", "L", "XL"],
-    "colors": ["浅灰", "炭黑"],
-    "highlights": ["修饰腿型", "高腰显腿长", "久坐不紧绷"],
-    "sizeSuggestion": "腰臀差大建议按臀围选码，腰围可微调",
-    "scenes": ["通勤", "会议", "日常"],
-    "outfitTips": "上衣塞衣角更显比例，搭短西装更干练。",
-    "description": "简洁直筒版型，适配通勤和休闲场景。"
-  },
-  {
-    "id": "pants-302",
-    "name": "柔雾阔腿休闲裤",
-    "category": "裤子",
-    "price": 179,
-    "mainImage": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80"
-    ],
-    "fabric": "天丝棉混纺",
-    "sizes": ["S", "M", "L"],
-    "colors": ["米杏", "雾棕"],
-    "highlights": ["轻盈垂坠", "遮胯不贴腿", "舒适百搭"],
-    "sizeSuggestion": "想要拖地效果可选择长一档尺码",
-    "scenes": ["日常", "出游", "咖啡约会"],
-    "outfitTips": "搭配修身针织上衣，营造上紧下松轮廓。",
-    "description": "自然垂感面料，穿着体验轻松无负担。"
-  },
-  {
-    "id": "set-401",
-    "name": "奶油针织半裙套装",
-    "category": "套装",
-    "price": 319,
-    "mainImage": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80"
-    ],
-    "fabric": "细针混纺",
-    "sizes": ["S", "M", "L"],
-    "colors": ["奶油白", "浅咖"],
-    "highlights": ["一套成型", "温柔气质", "可拆分搭配"],
-    "sizeSuggestion": "上衣合身为佳，下半身丰满建议大一码",
-    "scenes": ["约会", "通勤", "轻聚会"],
-    "outfitTips": "可拆开搭配基础单品，提升利用率。",
-    "description": "软糯针织触感，轻松穿出温柔感。"
-  },
-  {
-    "id": "set-402",
-    "name": "极简西装短裤套装",
-    "category": "套装",
-    "price": 339,
-    "mainImage": "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=900&q=80"
-    ],
-    "fabric": "挺括西装面料",
-    "sizes": ["S", "M", "L"],
-    "colors": ["米白", "浅灰"],
-    "highlights": ["通勤利落", "上镜高级", "夏季不厚重"],
-    "sizeSuggestion": "肩宽建议按肩线选码，裤长可按身高选",
-    "scenes": ["通勤", "会议", "城市出行"],
-    "outfitTips": "内搭背心或短袖，增加层次感。",
-    "description": "干净剪裁，适合轻熟风格日常穿着。"
-  },
-  {
-    "id": "coat-501",
-    "name": "浅杏短款西装外套",
-    "category": "外套",
-    "price": 289,
-    "mainImage": "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80",
-    "images": [
-      "https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1475180098004-ca77a66827be?auto=format&fit=crop&w=800&q=80"
     ],
     "fabric": "聚酯纤维混纺",
-    "sizes": ["S", "M", "L"],
-    "colors": ["浅杏", "雾灰"],
-    "highlights": ["挺括有型", "修饰肩线", "叠穿友好"],
-    "sizeSuggestion": "内搭针织建议正常码，内搭卫衣建议大一码",
-    "scenes": ["通勤", "约会", "通学"],
-    "outfitTips": "与连衣裙组合可平衡温柔与干练。",
-    "description": "短款比例更显高，适合小个子女生。"
+    "sizes": "S / M / L / XL",
+    "highlights": ["修饰腿型", "久坐不紧绷", "通勤百搭"],
+    "description": "利落版型显高显瘦，轻松打造都市感。"
   },
   {
-    "id": "coat-502",
-    "name": "轻暖毛呢翻领外套",
-    "category": "外套",
-    "price": 359,
-    "mainImage": "https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80",
+    "id": "pants-002",
+    "name": "垂感阔腿休闲裤",
+    "category": "裤子",
+    "price": 169,
+    "mainImage": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80",
     "images": [
-      "https://images.unsplash.com/photo-1514996937319-344454492b37?auto=format&fit=crop&w=900&q=80",
-      "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800&q=80"
     ],
-    "fabric": "仿毛呢混纺",
-    "sizes": ["M", "L", "XL"],
-    "colors": ["奶咖", "浅驼"],
-    "highlights": ["柔和保暖", "不压身高", "质感翻领"],
-    "sizeSuggestion": "肩部活动量大建议选L及以上",
-    "scenes": ["秋冬通勤", "周末出行", "聚会"],
-    "outfitTips": "搭配高领打底和直筒裤，简洁又耐看。",
-    "description": "柔和奶咖色系，轻松融入日常衣橱。"
+    "fabric": "天丝混纺",
+    "sizes": "S / M / L",
+    "highlights": ["垂坠有型", "轻盈透气", "遮胯显瘦"],
+    "description": "舒适不挑腿型，适合日常和出游穿搭。"
+  },
+  {
+    "id": "set-001",
+    "name": "针织开衫半裙套装",
+    "category": "套装",
+    "price": 299,
+    "mainImage": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=800&q=80"
+    ],
+    "fabric": "针织混纺",
+    "sizes": "S / M / L",
+    "highlights": ["一套搞定穿搭", "温柔气质", "上镜高级感"],
+    "description": "上短下长比例更佳，通勤约会皆可。"
+  },
+  {
+    "id": "set-002",
+    "name": "轻运动风短袖短裙套装",
+    "category": "套装",
+    "price": 259,
+    "mainImage": "https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=800&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1464863979621-258859e62245?auto=format&fit=crop&w=800&q=80"
+    ],
+    "fabric": "棉涤混纺",
+    "sizes": "S / M / L",
+    "highlights": ["清爽减龄", "日常好打理", "可分开搭配"],
+    "description": "轻松活力感，适合周末出街。"
   }
 ]

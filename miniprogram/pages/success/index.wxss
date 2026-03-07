@@ -2,25 +2,21 @@
   text-align: center;
   padding-top: 40rpx;
 }
-
 .icon {
   width: 120rpx;
   height: 120rpx;
   line-height: 120rpx;
   margin: 0 auto 20rpx;
   border-radius: 50%;
-  background: #eef5ee;
-  color: #6f9d75;
+  background: #eaf9ef;
+  color: #2faf66;
   font-size: 56rpx;
 }
-
 .title {
   font-size: 36rpx;
   font-weight: 600;
-  color: #433d36;
 }
-
 .desc {
   margin: 20rpx 0 30rpx;
-  color: #6d665f;
+  color: #666;
 }

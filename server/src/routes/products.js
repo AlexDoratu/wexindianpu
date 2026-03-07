@@ -15,25 +15,17 @@ router.get('/', (req, res) => {
       });
     }
 
-    try {
-      const allProducts = JSON.parse(data);
-      const { category } = req.query;
-      const filtered = category
-        ? allProducts.filter((item) => item.category === category)
-        : allProducts;
+    const allProducts = JSON.parse(data);
+    const { category } = req.query;
+    const filtered = category
+      ? allProducts.filter((item) => item.category === category)
+      : allProducts;
 
-      return res.json({
-        code: 0,
-        message: 'ok',
-        data: filtered
-      });
-    } catch (parseErr) {
-      return res.status(500).json({
-        code: 500,
-        message: '商品数据格式错误',
-        data: null
-      });
-    }
+    return res.json({
+      code: 0,
+      message: 'ok',
+      data: filtered
+    });
   });
 });
 

@@ -1,36 +1,24 @@
-<view class="container home-page">
-  <view class="card banner-card">
-    <image class="banner-img" src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1100&q=80" mode="aspectFill" />
-    <view class="banner-title">简衣女装</view>
-    <view class="banner-subtitle">简洁、温柔、好搭配的日常衣橱</view>
+<view class="container">
+  <view class="card banner">
+    <image class="banner-img" src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=1000&q=80" mode="aspectFill" />
+    <view class="brand-name">简衣女装</view>
+    <view class="brand-desc">为小红书来的你，挑选简洁有质感的日常穿搭。</view>
   </view>
 
   <view class="card">
-    <view class="section-title">品牌介绍</view>
-    <view class="section-desc">我们专注通勤与日常场景，挑选“好穿、显气质、易搭配”的女装单品，帮助你快速完成一天穿搭。</view>
-  </view>
-
-  <view class="card">
-    <view class="section-title">主推系列</view>
-    <view class="series-list">
-      <view class="series-item">通勤气质</view>
-      <view class="series-item">温柔约会</view>
-      <view class="series-item">显瘦百搭</view>
+    <view class="section-title">主推款式</view>
+    <view class="tag-list">
+      <text class="tag">连衣裙</text>
+      <text class="tag">上衣</text>
+      <text class="tag">裤子</text>
+      <text class="tag">套装</text>
     </view>
-    <button class="ghost-btn" bindtap="goProducts">浏览全部系列</button>
+    <button class="primary-btn" bindtap="goProducts">查看全部商品</button>
   </view>
 
   <view class="card">
-    <view class="section-title">爆款推荐</view>
-    <view wx:if="{{!hotProducts.length}}" class="empty-text">加载中...</view>
-    <view wx:for="{{hotProducts}}" wx:key="id" class="hot-item" data-product="{{item}}" bindtap="toDetail">
-      <image class="hot-image" src="{{item.mainImage}}" mode="aspectFill" />
-      <view class="hot-info">
-        <view class="hot-name">{{item.name}}</view>
-        <view class="hot-price">¥{{item.price}}</view>
-      </view>
-    </view>
+    <view class="section-title">联系客服</view>
+    <view class="contact-text">如需推荐尺码或搭配建议，点击下方立即咨询。</view>
+    <button class="primary-btn" bindtap="goLeadForm">立即咨询</button>
   </view>
-
-  <button class="primary-btn consult-btn" bindtap="goLeadForm">立即咨询</button>
 </view>
