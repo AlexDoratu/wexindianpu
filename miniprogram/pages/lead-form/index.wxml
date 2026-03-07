@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="card">
+    <view class="title">咨询购买登记</view>
+
+    <view class="field"><text class="label">姓名*</text><input placeholder="请输入姓名" data-key="name" value="{{form.name}}" bindinput="onInput" /></view>
+    <view class="field"><text class="label">手机号*</text><input placeholder="请输入手机号" type="number" data-key="mobile" value="{{form.mobile}}" bindinput="onInput" /></view>
+    <view class="field"><text class="label">微信号*</text><input placeholder="请输入微信号" data-key="wechatId" value="{{form.wechatId}}" bindinput="onInput" /></view>
+    <view class="field"><text class="label">商品*</text><input placeholder="请输入商品名称" data-key="productName" value="{{form.productName}}" bindinput="onInput" /></view>
+    <view class="field"><text class="label">尺码</text><input placeholder="如：M" data-key="size" value="{{form.size}}" bindinput="onInput" /></view>
+    <view class="field"><text class="label">颜色</text><input placeholder="如：奶白色" data-key="color" value="{{form.color}}" bindinput="onInput" /></view>
+    <view class="field"><text class="label">备注</text><textarea placeholder="其他需求" data-key="remark" value="{{form.remark}}" bindinput="onInput" /></view>
+
+    <button class="primary-btn" loading="{{submitting}}" bindtap="onSubmit">提交咨询</button>
+  </view>
+</view>

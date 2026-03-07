@@ -1,0 +1,30 @@
+.title {
+  font-size: 34rpx;
+  font-weight: 600;
+  margin-bottom: 20rpx;
+  color: #433d36;
+}
+
+.field {
+  margin-bottom: 18rpx;
+}
+
+.label {
+  display: block;
+  color: #6f675f;
+  margin-bottom: 8rpx;
+}
+
+input,
+textarea {
+  width: 100%;
+  background: #f7f4ef;
+  border-radius: 10rpx;
+  padding: 16rpx;
+  box-sizing: border-box;
+  color: #49433d;
+}
+
+textarea {
+  height: 140rpx;
+}

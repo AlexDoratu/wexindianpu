@@ -1,0 +1,9 @@
+<view class="container">
+  <view class="card center">
+    <view class="icon">✓</view>
+    <view class="title">提交成功</view>
+    <view class="desc">客服会尽快与您联系，请留意微信消息。</view>
+    <button class="primary-btn" bindtap="goHome">返回首页</button>
+    <button bindtap="goProducts">继续浏览商品</button>
+  </view>
+</view>
