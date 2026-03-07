@@ -1,0 +1,22 @@
+<view class="container">
+  <scroll-view scroll-x class="category-bar" show-scrollbar="false">
+    <view class="category-list">
+      <block wx:for="{{categories}}" wx:key="*this">
+        <view class="category-item {{currentCategory===item?'active':''}}" data-category="{{item}}" bindtap="onChangeCategory">
+          {{item}}
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+
+  <view wx:if="{{loading}}" class="loading">加载中...</view>
+
+  <view wx:for="{{products}}" wx:key="id" class="card product-card" data-product="{{item}}" bindtap="toDetail">
+    <image class="product-img" src="{{item.mainImage}}" mode="aspectFill" />
+    <view class="product-info">
+      <view class="product-name">{{item.name}}</view>
+      <view class="product-meta">{{item.category}} · {{item.sizes}}</view>
+      <view class="price">¥{{item.price}}</view>
+    </view>
+  </view>
+</view>
