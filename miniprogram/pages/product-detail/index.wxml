@@ -1,8 +1,8 @@
 <view class="container" wx:if="{{product}}">
   <view class="card">
     <swiper class="hero-swiper" autoplay indicator-dots circular>
-      <swiper-item wx:for="{{product.images}}" wx:key="*this">
-        <image class="hero" src="{{item}}" mode="aspectFill" />
+      <swiper-item wx:for="{{product.images}}" wx:key="*this" wx:for-index="imgIndex">
+        <image class="hero" src="{{item}}" mode="aspectFill" data-index="{{imgIndex}}" binderror="onSwiperImageError" />
       </swiper-item>
     </swiper>
     <view class="name">{{product.name}}</view>
@@ -16,14 +16,14 @@
     <view class="title">商品信息</view>
     <view class="item">面料说明：{{product.fabric}}</view>
     <view class="item">尺码建议：{{product.sizeSuggestion}}</view>
-    <view class="item">适合场景：{{product.scenes.join(' / ')}}</view>
+    <view class="item">适合场景：{{product.scenesText}}</view>
     <view class="item">穿搭建议：{{product.outfitTips}}</view>
   </view>
 
   <view class="card">
     <view class="title">颜色与尺码</view>
-    <view class="item">颜色：{{product.colors.join(' / ')}}</view>
-    <view class="item">尺码：{{product.sizes.join(' / ')}}</view>
+    <view class="item">颜色：{{product.colorsText}}</view>
+    <view class="item">尺码：{{product.sizesText}}</view>
     <view class="item">商品介绍：{{product.description}}</view>
   </view>
 

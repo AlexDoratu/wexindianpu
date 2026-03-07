@@ -1,9 +1,9 @@
 <view class="container">
   <scroll-view scroll-x class="category-bar" show-scrollbar="false">
     <view class="category-list">
-      <block wx:for="{{categories}}" wx:key="*this">
-        <view class="category-item {{currentCategory===item?'active':''}}" data-category="{{item}}" bindtap="onChangeCategory">
-          {{item}}
+      <block wx:for="{{categories}}" wx:key="*this" wx:for-item="category">
+        <view class="category-item {{currentCategory===category?'active':''}}" data-category="{{category}}" bindtap="onChangeCategory">
+          {{category}}
         </view>
       </block>
     </view>
@@ -11,13 +11,13 @@
 
   <view wx:if="{{loading}}" class="loading">加载中...</view>
 
-  <view wx:for="{{products}}" wx:key="id" class="card product-card" data-product="{{item}}" bindtap="toDetail">
-    <image class="product-img" src="{{item.mainImage}}" mode="aspectFill" />
+  <view wx:for="{{products}}" wx:key="id" wx:for-item="product" wx:for-index="productIndex" class="card product-card" data-product="{{product}}" bindtap="toDetail">
+    <image class="product-img" src="{{product.mainImage}}" mode="aspectFill" data-index="{{productIndex}}" binderror="onProductImageError" />
     <view class="product-info">
-      <view class="product-name">{{item.name}}</view>
-      <view class="price">¥{{item.price}}</view>
+      <view class="product-name">{{product.name}}</view>
+      <view class="price">¥{{product.price}}</view>
       <view class="tag-wrap">
-        <text wx:for="{{item.highlights}}" wx:key="*this" class="tag">{{item}}</text>
+        <text wx:for="{{product.highlights}}" wx:key="*this" wx:for-item="tag" class="tag">{{tag}}</text>
       </view>
     </view>
   </view>

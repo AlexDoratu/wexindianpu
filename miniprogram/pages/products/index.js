@@ -1,5 +1,7 @@
 const { getProducts } = require('../../utils/api');
 
+const FALLBACK_IMAGE = 'https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?auto=format&fit=crop&w=900&q=80';
+
 Page({
   data: {
     categories: ['全部', '连衣裙', '上衣', '裤子', '套装', '外套'],
@@ -28,6 +30,15 @@ Page({
   onChangeCategory(e) {
     const category = e.currentTarget.dataset.category;
     this.setData({ currentCategory: category }, () => this.fetchProducts());
+  },
+
+  onProductImageError(e) {
+    const index = Number(e.currentTarget.dataset.index);
+    if (Number.isNaN(index)) return;
+    const products = [...this.data.products];
+    if (!products[index]) return;
+    products[index].mainImage = FALLBACK_IMAGE;
+    this.setData({ products });
   },
 
   toDetail(e) {
