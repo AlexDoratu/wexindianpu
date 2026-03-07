@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/home/index",
+    "pages/products/index",
+    "pages/product-detail/index",
+    "pages/lead-form/index",
+    "pages/success/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "简衣女装",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#f7f7f7",
+    "backgroundTextStyle": "light"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
