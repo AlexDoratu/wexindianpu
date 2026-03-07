@@ -1,0 +1,29 @@
+.hero {
+  width: 100%;
+  height: 460rpx;
+  border-radius: 12rpx;
+}
+.name {
+  margin-top: 16rpx;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.price {
+  margin-top: 12rpx;
+  color: #d85b7a;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.title {
+  font-size: 30rpx;
+  font-weight: 600;
+  margin-bottom: 12rpx;
+}
+.item {
+  color: #666;
+  line-height: 1.8;
+}
+.highlight {
+  color: #666;
+  margin-bottom: 8rpx;
+}

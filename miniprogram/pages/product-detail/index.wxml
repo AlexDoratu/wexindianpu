@@ -1,0 +1,21 @@
+<view class="container" wx:if="{{product}}">
+  <view class="card">
+    <image class="hero" src="{{product.mainImage}}" mode="aspectFill" />
+    <view class="name">{{product.name}}</view>
+    <view class="price">¥{{product.price}}</view>
+  </view>
+
+  <view class="card">
+    <view class="title">商品信息</view>
+    <view class="item">面料：{{product.fabric}}</view>
+    <view class="item">尺码：{{product.sizes}}</view>
+    <view class="item">介绍：{{product.description}}</view>
+  </view>
+
+  <view class="card">
+    <view class="title">穿搭卖点</view>
+    <view wx:for="{{product.highlights}}" wx:key="*this" class="highlight">• {{item}}</view>
+  </view>
+
+  <button class="primary-btn" bindtap="goConsult">立即咨询</button>
+</view>
