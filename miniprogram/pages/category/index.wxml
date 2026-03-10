@@ -1,0 +1,13 @@
+<view class="safe-container fade-in-up">
+  <view class="panel">
+    <view class="section-title">贴身品类</view>
+    <view class="section-subtitle">按身体感受与使用场景挑选</view>
+  </view>
+  <block wx:for="{{categories}}" wx:key="id">
+    <view class="panel soft-press" bindtap="openList" data-id="{{item.id}}">
+      <view class="name">{{item.name}}</view>
+      <view class="intro">{{item.intro}}</view>
+      <view class="link">进入商品列表 →</view>
+    </view>
+  </block>
+</view>

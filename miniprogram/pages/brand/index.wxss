@@ -1,0 +1,5 @@
+.cover { background: linear-gradient(145deg, #f4ece8, #f8f4f1); }
+.brand-name { font-size: 42rpx; color: var(--text-primary); font-weight: 600; }
+.brand-slogan { margin-top: 10rpx; font-size: 24rpx; color: var(--text-secondary); }
+.desc { line-height: 1.8; color: var(--text-secondary); font-size: 26rpx; }
+.step { color: var(--text-secondary); font-size: 25rpx; margin-bottom: 10rpx; }

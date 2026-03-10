@@ -1,36 +1,19 @@
-.banner-img {
-  width: 100%;
-  height: 280rpx;
-  border-radius: 12rpx;
-}
-.brand-name {
-  font-size: 40rpx;
-  font-weight: bold;
-  margin-top: 20rpx;
-}
-.brand-desc {
-  color: #666;
-  margin-top: 8rpx;
-}
-.section-title {
-  font-size: 32rpx;
-  font-weight: 600;
-  margin-bottom: 20rpx;
-}
-.tag-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 20rpx;
-}
-.tag {
-  background: #fdf1f4;
-  color: #d85b7a;
-  padding: 8rpx 18rpx;
-  border-radius: 999rpx;
-  margin-right: 12rpx;
-  margin-bottom: 12rpx;
-}
-.contact-text {
-  margin-bottom: 20rpx;
-  color: #666;
-}
+.hero-swiper { height: 400rpx; margin-bottom: 24rpx; }
+.hero-card { border-radius: 24rpx; overflow: hidden; position: relative; height: 100%; }
+.hero-image { width: 100%; height: 100%; }
+.hero-overlay { position: absolute; left: 0; right: 0; bottom: 0; padding: 30rpx 24rpx; background: linear-gradient(to top, rgba(58,45,40,.45), transparent); }
+.hero-title { color: #fff; font-size: 30rpx; }
+.entry-row { display: flex; margin-top: 16rpx; }
+.entry { flex: 1; background: var(--bg-soft); border-radius: 16rpx; padding: 20rpx; color: var(--text-secondary); margin-right: 12rpx; text-align: center; }
+.entry:last-child { margin-right: 0; }
+.series-item { display: flex; margin-top: 18rpx; background: #fff; border-radius: 16rpx; overflow: hidden; }
+.series-image { width: 180rpx; height: 140rpx; }
+.series-content { flex: 1; padding: 18rpx; }
+.series-name { font-weight: 600; color: var(--text-primary); margin-bottom: 8rpx; }
+.series-desc { font-size: 24rpx; color: var(--text-secondary); }
+.product-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16rpx; margin-top: 18rpx; }
+.product-card { background: #fff; border-radius: 16rpx; padding: 14rpx; }
+.product-image { height: 220rpx; }
+.product-name { font-size: 26rpx; margin-top: 10rpx; color: var(--text-primary); }
+.product-intro { font-size: 22rpx; color: var(--text-tertiary); margin-top: 6rpx; height: 62rpx; }
+.product-price { margin-top: 8rpx; color: var(--accent-deep); font-weight: 600; }

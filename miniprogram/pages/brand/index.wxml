@@ -1,0 +1,23 @@
+<view class="safe-container fade-in-up" wx:if="{{brand}}">
+  <view class="panel cover">
+    <view class="brand-name">{{brand.name}}</view>
+    <view class="brand-slogan">{{brand.slogan}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">品牌主张</view>
+    <view class="desc">{{brand.story}}</view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">价值关键词</view>
+    <view>
+      <text class="chip" wx:for="{{brand.values}}" wx:key="*this">{{item}}</text>
+    </view>
+  </view>
+
+  <view class="panel">
+    <view class="section-title">品质流程</view>
+    <view class="step" wx:for="{{brand.process}}" wx:key="*this">• {{item}}</view>
+  </view>
+</view>

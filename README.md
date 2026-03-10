@@ -1,82 +1,63 @@
-# 女装销售微信小程序（2人创业团队版）
+# 微信小程序：女性贴身衣物品牌展示系统
 
-目标：简单、快速上线，承接小红书引流用户，实现“商品展示 + 客户咨询登记”。
+一个偏“品牌画册 + 轻导购”的微信小程序原型，聚焦女性贴身衣物展示：文胸、内裤、吊带/背心、家居打底、塑形系列、轻运动贴身系列。
 
-## 项目目录结构
+## 体验定位
+- 视觉：奶白、浅灰、雾粉、浅咖等低饱和色；强调留白、舒适与高级感。
+- 内容：强化面料、场景、系列与信任表达，弱化强促销感。
+- 架构：mock 数据配置化，已预留 API/CMS 对接层，方便后续正式项目扩展。
+
+## 小程序目录
 
 ```text
-wexindianpu/
-├── miniprogram/                  # 微信小程序前端（原生）
-│   ├── app.js
-│   ├── app.json
-│   ├── app.wxss
-│   ├── sitemap.json
-│   ├── utils/
-│   │   └── api.js
-│   └── pages/
-│       ├── home/                 # 首页
-│       ├── products/             # 商品列表
-│       ├── product-detail/       # 商品详情
-│       ├── lead-form/            # 咨询/下单登记
-│       └── success/              # 提交成功
-├── server/                       # Node.js + Express 后端
-│   ├── package.json
-│   ├── data/
-│   │   ├── products.json         # 商品静态数据
-│   │   └── leads.db              # SQLite 数据库（运行后生成）
-│   └── src/
-│       ├── index.js              # 服务入口
-│       ├── db.js                 # SQLite 初始化
-│       └── routes/
-│           ├── products.js       # GET /products
-│           └── leads.js          # POST /leads
-└── README.md
+miniprogram/
+├── app.js
+├── app.json
+├── app.wxss
+├── styles/
+│   ├── tokens.wxss
+│   ├── animation.wxss
+│   └── components.wxss
+├── mock/
+│   ├── categories.js
+│   ├── products.js
+│   ├── series.js
+│   └── brand.js
+├── utils/
+│   ├── api.js
+│   ├── cms-adapter.js
+│   └── format.js
+└── pages/
+    ├── home/
+    ├── category/
+    ├── product-list/
+    ├── product-detail/
+    ├── series/
+    └── brand/
 ```
 
-## 功能范围（第一版）
+## 页面说明
+- 首页：首页 Banner、系列精选、推荐商品。
+- 分类页：六大贴身分类入口。
+- 商品列表页：分类筛选 + 排序 + 收藏。
+- 商品详情页：面料、体验、安心细节。
+- 系列页：按场景展示系列。
+- 品牌页：品牌主张、价值关键词、品质流程。
 
-已实现：
-- 商品展示（分类列表 + 详情）
-- 客户咨询/下单登记
-- 提交成功页
+## 运行方式
 
-未包含（按你要求）：
-- 微信支付
-- 购物车
-- 会员
-- 优惠券
-- 后台管理
+### 1) 微信开发者工具
+1. 打开微信开发者工具。
+2. 导入项目目录，选择 `miniprogram/`。
+3. 编译预览。
 
-## 后端接口
+### 2) 数据源切换（mock / API）
+编辑 `miniprogram/utils/api.js`：
+- `USE_MOCK = true`：使用本地 mock。
+- `USE_MOCK = false`：请求后端接口（默认 `http://localhost:3000`）。
 
-- `GET /products`
-  - 支持可选参数 `category`（连衣裙、上衣、裤子、套装）
-- `POST /leads`
-  - 保存客户咨询信息到 SQLite
-
-## 本地运行方式
-
-### 1) 启动后端
-
-```bash
-cd server
-npm install
-npm run dev
-```
-
-默认地址：`http://localhost:3000`
-
-### 2) 启动小程序
-
-1. 打开微信开发者工具
-2. 选择“导入项目”，目录选择 `miniprogram/`
-3. 在 `miniprogram/utils/api.js` 确认后端地址（默认 `http://localhost:3000`）
-4. 开始预览与调试
-
-> 注意：真机调试时，`localhost` 需要改成你电脑局域网 IP（例如 `http://192.168.1.10:3000`）。
-
-## 维护建议（2人团队）
-
-- 继续保持“前后端目录分离 + 简单 API”原则
-- 商品先维护在 `products.json`，后续再迁移数据库
-- 每周复盘线索表 `leads` 字段，逐步增加来源追踪（如小红书笔记 ID）
+## 后续扩展建议
+1. 接入 CMS（如 Strapi/Contentful）并在 `cms-adapter.js` 做字段映射。
+2. 加入用户收藏持久化（本地缓存 + 云端用户表）。
+3. 增加材质说明、尺码建议、洗护指南模块。
+4. 增加“场景化导购问答”与“试穿反馈”数据闭环。

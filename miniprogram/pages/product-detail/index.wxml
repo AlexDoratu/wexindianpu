@@ -1,21 +1,29 @@
-<view class="container" wx:if="{{product}}">
-  <view class="card">
-    <image class="hero" src="{{product.mainImage}}" mode="aspectFill" />
-    <view class="name">{{product.name}}</view>
+<view class="safe-container fade-in-up" wx:if="{{product}}">
+  <view class="panel">
+    <image class="card-image hero" src="{{product.image}}" mode="aspectFill"/>
+    <view class="name-row">
+      <view>
+        <view class="name">{{product.name}}</view>
+        <view class="intro">{{product.intro}}</view>
+      </view>
+      <view class="fav soft-press" bindtap="toggleFav">{{favorite ? '♥' : '♡'}}</view>
+    </view>
     <view class="price">¥{{product.price}}</view>
+    <view class="fabric">面料：{{product.fabric}}</view>
+    <view class="item-tags">
+      <text class="mini-tag" wx:for="{{product.tags}}" wx:key="*this">{{item}}</text>
+    </view>
   </view>
 
-  <view class="card">
-    <view class="title">商品信息</view>
-    <view class="item">面料：{{product.fabric}}</view>
-    <view class="item">尺码：{{product.sizes}}</view>
-    <view class="item">介绍：{{product.description}}</view>
+  <view class="panel">
+    <view class="section-title">穿着体验</view>
+    <view class="desc">以低压感结构和细腻面料，打造贴肤不黏腻的长时舒适；弱化束缚感，提升身体活动自由度。</view>
   </view>
 
-  <view class="card">
-    <view class="title">穿搭卖点</view>
-    <view wx:for="{{product.highlights}}" wx:key="*this" class="highlight">• {{item}}</view>
+  <view class="panel">
+    <view class="section-title">安心细节</view>
+    <view class="desc">- 重点摩擦区柔化处理
+- 车线平整减少触肤刺激
+- 颜色体系经过低饱和视觉校准</view>
   </view>
-
-  <button class="primary-btn" bindtap="goConsult">立即咨询</button>
 </view>

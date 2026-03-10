@@ -1,0 +1,17 @@
+<view class="safe-container fade-in-up">
+  <view class="panel">
+    <view class="section-title">系列 / 场景</view>
+    <view class="section-subtitle">把贴身体验放在一天不同状态里</view>
+  </view>
+
+  <block wx:for="{{list}}" wx:key="id">
+    <view class="panel soft-press">
+      <image class="card-image img" src="{{item.image}}" mode="aspectFill"/>
+      <view class="name">{{item.name}}</view>
+      <view class="scene">场景：{{item.scene}}</view>
+      <view class="desc">{{item.description}}</view>
+    </view>
+  </block>
+
+  <view class="panel cta soft-press" bindtap="toProducts">查看全线商品 →</view>
+</view>

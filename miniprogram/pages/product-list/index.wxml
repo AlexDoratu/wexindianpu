@@ -1,0 +1,37 @@
+<view class="safe-container fade-in-up">
+  <view class="panel">
+    <view class="section-title">商品列表</view>
+    <scroll-view scroll-x class="chips-row" enable-flex>
+      <view class="chips-inner">
+        <block wx:for="{{categories}}" wx:key="id">
+          <view class="chip {{currentCategory===item.id?'chip-active':''}}" data-id="{{item.id}}" bindtap="changeCategory">{{item.name}}</view>
+        </block>
+      </view>
+    </scroll-view>
+
+    <scroll-view scroll-x class="chips-row" enable-flex>
+      <view class="chips-inner">
+        <block wx:for="{{sortOptions}}" wx:key="id">
+          <view class="chip {{currentSort===item.id?'chip-active':''}}" data-id="{{item.id}}" bindtap="changeSort">{{item.name}}</view>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+
+  <block wx:for="{{products}}" wx:key="id">
+    <view class="panel item soft-press">
+      <image class="card-image item-image" src="{{item.image}}" mode="aspectFill" data-id="{{item.id}}" bindtap="openDetail"/>
+      <view class="item-main" data-id="{{item.id}}" bindtap="openDetail">
+        <view class="item-name">{{item.name}}</view>
+        <view class="item-intro">{{item.intro}}</view>
+        <view class="item-tags">
+          <text class="mini-tag" wx:for="{{item.tags}}" wx:key="*this">{{item}}</text>
+        </view>
+      </view>
+      <view class="item-bottom">
+        <text class="item-price">¥{{item.price}}</text>
+        <text class="fav" data-id="{{item.id}}" bindtap="toggleFav">{{favorites[item.id] ? '♥ 已收藏' : '♡ 收藏'}}</text>
+      </view>
+    </view>
+  </block>
+</view>
