@@ -65,6 +65,23 @@ function getProducts(options = {}) {
   return fromMock(list);
 }
 
+
+function getPageConfig(pageKey) {
+  if (!USE_MOCK) return request(`/page-config/${pageKey}`);
+
+  if (pageKey === 'home') {
+    return fromMock({
+      sections: [
+        { id: 'hero-banner', type: 'banner', enabled: true },
+        { id: 'series-pick', type: 'series', enabled: true },
+        { id: 'recommend-products', type: 'products', enabled: true }
+      ]
+    });
+  }
+
+  return fromMock({ sections: [] });
+}
+
 function getProductDetail(id) {
   if (!USE_MOCK) return request(`/products/${id}`);
   return fromMock(products.find((item) => item.id === id));
@@ -75,5 +92,6 @@ module.exports = {
   getSeries,
   getBrand,
   getProducts,
-  getProductDetail
+  getProductDetail,
+  getPageConfig
 };

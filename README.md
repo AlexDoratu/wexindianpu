@@ -56,6 +56,26 @@ miniprogram/
 - `USE_MOCK = true`：使用本地 mock。
 - `USE_MOCK = false`：请求后端接口（默认 `http://localhost:3000`）。
 
+
+### 3) 后端服务（模块化）
+```bash
+cd server
+npm install
+# 管理端鉴权 token（生产请替换）
+export ADMIN_TOKEN=change-me
+npm run dev
+```
+
+默认地址 `http://localhost:3000`，可用接口：
+- `GET /health`
+- `GET /products`、`GET /products/:id`
+- `POST /leads`（含基础限流：同 IP 每分钟最多 10 次）
+- `GET /categories`、`GET /series`、`GET /brand`
+- `GET /page-config/:pageKey`（前台读取页面装修配置）
+- `GET /admin/page-configs`、`GET /admin/page-config/:pageKey`、`PUT /admin/page-config/:pageKey`（低代码编辑器后台）
+  - 需 `Authorization: Bearer <ADMIN_TOKEN>`
+  - `PUT` 时 body 必须带 `version`，版本不一致返回 `409`
+
 ## 后续扩展建议
 1. 接入 CMS（如 Strapi/Contentful）并在 `cms-adapter.js` 做字段映射。
 2. 加入用户收藏持久化（本地缓存 + 云端用户表）。
