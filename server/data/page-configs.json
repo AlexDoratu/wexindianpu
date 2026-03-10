@@ -1,0 +1,58 @@
+{
+  "home": {
+    "pageKey": "home",
+    "version": 1,
+    "updatedAt": "2026-01-01T00:00:00.000Z",
+    "sections": [
+      {
+        "id": "hero-banner",
+        "type": "banner",
+        "title": "首页轮播",
+        "enabled": true,
+        "style": {
+          "autoplay": true,
+          "interval": 3800
+        },
+        "data": {
+          "source": "static",
+          "items": [
+            {
+              "id": "b1",
+              "image": "https://images.unsplash.com/photo-1485462537746-965f33f7f6a7?auto=format&fit=crop&w=1200&q=80",
+              "title": "轻盈贴身 新一季上新"
+            }
+          ]
+        }
+      },
+      {
+        "id": "series-pick",
+        "type": "series",
+        "title": "系列精选",
+        "enabled": true,
+        "style": {
+          "layout": "card-list"
+        },
+        "data": {
+          "source": "api",
+          "api": "/series"
+        }
+      },
+      {
+        "id": "recommend-products",
+        "type": "products",
+        "title": "推荐商品",
+        "enabled": true,
+        "style": {
+          "layout": "grid"
+        },
+        "data": {
+          "source": "api",
+          "api": "/products",
+          "query": {
+            "sort": "recommend"
+          }
+        }
+      }
+    ]
+  }
+}
