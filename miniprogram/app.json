@@ -1,17 +1,42 @@
 {
   "pages": [
     "pages/home/index",
-    "pages/products/index",
+    "pages/category/index",
+    "pages/product-list/index",
     "pages/product-detail/index",
-    "pages/lead-form/index",
-    "pages/success/index"
+    "pages/series/index",
+    "pages/brand/index"
   ],
   "window": {
-    "navigationBarTitleText": "简衣女装",
-    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "轻柔贴身",
+    "navigationBarBackgroundColor": "#F7F4F1",
     "navigationBarTextStyle": "black",
-    "backgroundColor": "#f7f7f7",
+    "backgroundColor": "#F7F4F1",
     "backgroundTextStyle": "light"
+  },
+  "tabBar": {
+    "color": "#8D8580",
+    "selectedColor": "#6C5E58",
+    "backgroundColor": "#FAF8F6",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类"
+      },
+      {
+        "pagePath": "pages/series/index",
+        "text": "系列"
+      },
+      {
+        "pagePath": "pages/brand/index",
+        "text": "品牌"
+      }
+    ]
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json"

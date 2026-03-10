@@ -1,22 +1,14 @@
+@import "styles/tokens.wxss";
+@import "styles/animation.wxss";
+@import "styles/components.wxss";
+
 page {
-  background: #f7f7f7;
-  color: #333;
+  background: var(--bg-page);
+  color: var(--text-primary);
   font-size: 28rpx;
+  font-family: "PingFang SC", "Helvetica Neue", Arial, sans-serif;
 }
 
-.container {
+.safe-container {
   padding: 24rpx;
-}
-
-.card {
-  background: #fff;
-  border-radius: 16rpx;
-  padding: 24rpx;
-  margin-bottom: 20rpx;
-}
-
-.primary-btn {
-  background: #d85b7a;
-  color: #fff;
-  border: none;
 }

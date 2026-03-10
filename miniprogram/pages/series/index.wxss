@@ -1,0 +1,5 @@
+.img { height: 300rpx; }
+.name { margin-top: 14rpx; font-size: 32rpx; color: var(--text-primary); font-weight: 600; }
+.scene { margin-top: 8rpx; color: var(--accent); font-size: 24rpx; }
+.desc { margin-top: 8rpx; color: var(--text-secondary); font-size: 24rpx; }
+.cta { text-align: center; color: var(--accent-deep); font-weight: 600; }

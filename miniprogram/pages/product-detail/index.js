@@ -1,19 +1,15 @@
+const { getProductDetail } = require('../../utils/api');
+
 Page({
   data: {
-    product: null
+    product: null,
+    favorite: false
   },
-
-  onLoad(options) {
-    if (options.product) {
-      const product = JSON.parse(decodeURIComponent(options.product));
-      this.setData({ product });
-    }
+  async onLoad(options) {
+    const product = await getProductDetail(options.id);
+    this.setData({ product });
   },
-
-  goConsult() {
-    const { product } = this.data;
-    wx.navigateTo({
-      url: `/pages/lead-form/index?product=${encodeURIComponent(JSON.stringify(product || {}))}`
-    });
+  toggleFav() {
+    this.setData({ favorite: !this.data.favorite });
   }
 });

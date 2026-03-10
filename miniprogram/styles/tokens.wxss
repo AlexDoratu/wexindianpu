@@ -1,0 +1,16 @@
+:root {
+  --bg-page: #f7f4f1;
+  --bg-card: #fdfbf9;
+  --bg-soft: #f3eeea;
+  --color-mist-pink: #ead8d6;
+  --color-latte: #d6c2b5;
+  --text-primary: #4f4540;
+  --text-secondary: #8e827c;
+  --text-tertiary: #a99f9a;
+  --line-soft: #ede6e2;
+  --accent: #b28886;
+  --accent-deep: #8c6462;
+  --radius-lg: 24rpx;
+  --radius-md: 16rpx;
+  --shadow-soft: 0 10rpx 30rpx rgba(128, 108, 96, 0.08);
+}
