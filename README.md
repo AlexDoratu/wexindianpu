@@ -53,8 +53,166 @@ miniprogram/
 
 ### 2) 数据源切换（mock / API）
 编辑 `miniprogram/utils/api.js`：
-- `USE_MOCK = true`：使用本地 mock。
+- `USE_MOCK = true`：使用本地 mock（默认）。
 - `USE_MOCK = false`：请求后端接口（默认 `http://localhost:3000`）。
+
+建议：
+- 开发 UI 与交互时优先使用 mock，速度快、不依赖后端状态。
+- 联调和发布前切换 API，验证真实接口和数据契约。
+
+---
+
+## 后端服务（模块化）
+
+### 1) 本地启动
+```bash
+cd server
+npm install
+
+# 管理端鉴权 token（生产必须替换为强随机值）
+export ADMIN_TOKEN=change-me
+
+npm run dev
+```
+
+默认地址：`http://localhost:3000`
+
+### 2) 后端架构说明
+当前后端采用分层结构：
+
+```text
+Route -> Controller -> Service -> Repository -> Data(JSON/SQLite)
+```
+
+- Route：URL 路由与中间件挂载。
+- Controller：处理 HTTP 请求/响应。
+- Service：业务规则（如 page-config 校验、版本控制）。
+- Repository：数据读写（JSON、SQLite）。
+- Data：
+  - `server/data/*.json`（商品、内容、页面配置）
+  - `server/data/leads.db`（线索表）
+
+### 3) 环境变量
+| 变量名 | 必填 | 默认值 | 说明 |
+|---|---|---|---|
+| `PORT` | 否 | `3000` | 后端监听端口 |
+| `ADMIN_TOKEN` | 是（启用 admin 接口时） | 无 | 管理端接口鉴权 Token |
+
+> 注意：若未设置 `ADMIN_TOKEN`，管理端接口鉴权会失败（返回 401）。
+
+### 4) 接口总览
+
+#### 健康检查
+- `GET /health`
+
+#### 商品
+- `GET /products`
+  - 可选 query：`category`、`keyword`、`sort`
+  - `sort` 支持：`recommend`、`priceAsc`、`priceDesc`、`sales`、`new`
+- `GET /products/:id`
+
+#### 内容
+- `GET /categories`
+- `GET /series`
+- `GET /brand`
+
+#### 线索
+- `POST /leads`
+  - 必填字段：`name`、`mobile`、`wechatId`、`productName`
+  - 基础限流：同 IP 每分钟最多 10 次
+
+#### 页面配置（低代码）
+前台读取：
+- `GET /page-config/:pageKey`
+
+管理端（需鉴权）：
+- `GET /admin/page-configs`
+- `GET /admin/page-config/:pageKey`
+- `PUT /admin/page-config/:pageKey`
+
+鉴权方式：
+```http
+Authorization: Bearer <ADMIN_TOKEN>
+```
+
+### 5) page-config 保存规则（重点）
+`PUT /admin/page-config/:pageKey` 必须遵循：
+
+1. body 必须包含 `version`（整数，且 >= 0）。
+2. body 必须包含 `sections` 数组。
+3. section 必须包含：
+   - `id`（字符串）
+   - `type`（`banner/series/products/custom`）
+   - `enabled`（布尔）
+   - `title`（字符串）
+   - `data.source`（`static/api`）
+   - 若 `source=api`，必须有 `data.api`
+4. 乐观锁：
+   - 如果请求 `version` 与服务端当前版本不一致，返回 `409`。
+   - 成功保存后版本自动 +1，并更新 `updatedAt`。
+5. 每次成功更新会自动写入历史快照文件，便于后续回滚。
+
+### 6) cURL 示例
+
+#### 6.1 获取页面配置（前台）
+```bash
+curl -s http://localhost:3000/page-config/home
+```
+
+#### 6.2 管理端读取（带 token）
+```bash
+curl -s \
+  -H "Authorization: Bearer $ADMIN_TOKEN" \
+  http://localhost:3000/admin/page-configs
+```
+
+#### 6.3 管理端更新（带 version）
+```bash
+curl -s -X PUT \
+  -H "Authorization: Bearer $ADMIN_TOKEN" \
+  -H "Content-Type: application/json" \
+  http://localhost:3000/admin/page-config/home \
+  -d '{
+    "version": 1,
+    "sections": [
+      {
+        "id": "hero-banner",
+        "type": "banner",
+        "enabled": true,
+        "title": "首页轮播",
+        "data": { "source": "static" }
+      }
+    ]
+  }'
+```
+
+#### 6.4 线索提交
+```bash
+curl -s -X POST \
+  -H "Content-Type: application/json" \
+  http://localhost:3000/leads \
+  -d '{
+    "name": "张三",
+    "mobile": "13800138000",
+    "wechatId": "zhangsan_wechat",
+    "productName": "云感无钢圈文胸"
+  }'
+```
+
+### 7) 常见问题（FAQ）
+
+1. **`/admin/*` 返回 401？**
+   - 检查是否设置了 `ADMIN_TOKEN`。
+   - 检查请求头是否带了 `Authorization: Bearer <ADMIN_TOKEN>`。
+
+2. **保存 page-config 返回 409？**
+   - 表示版本冲突：你提交的 `version` 不是最新版本。
+   - 先重新 `GET` 最新配置，再合并后重试。
+
+3. **线索接口偶发 429？**
+   - 触发了同 IP 每分钟 10 次限流，稍后重试即可。
+
+---
 
 ## 后续扩展建议
 1. 接入 CMS（如 Strapi/Contentful）并在 `cms-adapter.js` 做字段映射。
